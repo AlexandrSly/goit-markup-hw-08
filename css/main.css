@@ -61,10 +61,15 @@ body {
   margin-top: 0;
   margin-bottom: 50px;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.17;
   text-align: center;
   color: var(--main-title-color);
+}
+@media screen and (min-width: 1200px) {
+  .section__title {
+    font-size: 36px;
+  }
 }
 
 .clients-link, .services__text, .soc-list__link, .check-text span, .check-text, .modal-close {
@@ -99,9 +104,8 @@ body {
   margin-left: auto;
   margin-right: auto;
   padding: 0px 15px;
-  width: 1200px;
+  width: 100%;
 }
-
 .logo {
   font-family: "Raleway", sans-serif;
   font-style: normal;
@@ -573,30 +577,61 @@ input::placeholder {
 
 .container__hero {
   padding: 200px 0;
-  max-width: 1600px;
+  align-content: center;
   height: 600px;
   margin: 0 auto;
+}
+@media screen and (min-width: 1200px) {
+  .container__hero {
+    max-width: 1600px;
+  }
 }
 
 .hero {
   background: #2f303a;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg-hero.jpg);
   text-align: center;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg-hero.jpg);
+}
+@media screen and (min-width: 320px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg-hero-mob.jpg);
+  }
+}
+@media screen and (min-width: 720px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg-hero-tab.jpg);
+  }
 }
 .hero__title {
-  width: 696px;
   margin: 0 auto;
   margin-bottom: 30px;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
+}
+@media screen and (min-width: 320px) {
+  .hero__title {
+    font-size: 26px;
+    line-height: 1.61;
+  }
+}
+@media screen and (min-width: 720px) {
+  .hero__title {
+    font-size: 26px;
+    line-height: 1.61;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    width: 696px;
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 .portfolio {
@@ -722,7 +757,7 @@ input::placeholder {
 
 .benefits__block {
   height: 120px;
-  width: 270px;
+  max-width: 100%;
   background-color: #f5f4fa;
   margin-bottom: 30px;
   display: flex;
@@ -738,34 +773,87 @@ input::placeholder {
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--main-title-color);
-  width: 270px;
+}
+@media screen and (min-width: 320px) {
+  .benefits__title {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .benefits__title {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .benefits__title {
+    width: 270px;
+  }
 }
 .benefits__subtitle {
   margin-top: 0;
   margin-bottom: 0;
   line-height: 1.71;
-  width: 270px;
 }
-.benefits .benefits__list {
+@media screen and (min-width: 320px) {
+  .benefits__subtitle {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .benefits__subtitle {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .benefits__subtitle {
+    width: 270px;
+  }
+}
+.benefits__list {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
+  justify-content: center;
+}
+@media screen and (min-width: 320px) {
+  .benefits__item {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .benefits__item {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .benefits__item {
+    width: 270px;
+  }
 }
 
 .services__container {
   padding: 94px 0;
   padding-top: 0;
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .services__container {
+    display: contents;
+  }
 }
 
 .services__list {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
+  justify-content: center;
 }
 .services__text {
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
   color: #ffffff;
-  width: 370px;
+  width: 100%;
   height: 70px;
   background-color: rgba(47, 48, 58, 0.8);
   position: absolute;
@@ -774,6 +862,9 @@ input::placeholder {
 }
 .services__item {
   position: relative;
+}
+.services__jpg {
+  width: 100%;
 }
 
 .team-container {
@@ -785,7 +876,14 @@ input::placeholder {
 }
 .team__list {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
+  justify-content: center;
+}
+.team__blok {
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 .team__text {
   padding-top: 30px;
@@ -805,10 +903,23 @@ input::placeholder {
   color: var(--second-title-color);
   margin-top: 10px;
 }
-.team__blok {
-  background: #ffffff;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
+.team__img {
+  display: block;
+}
+@media screen and (min-width: 320px) {
+  .team__img {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .team__img {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__img {
+    width: 270px;
+  }
 }
 
 .soc-list__team {
@@ -827,11 +938,23 @@ input::placeholder {
 }
 .clients-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
+  justify-content: center;
 }
 .clients-item {
-  width: 170px;
   height: 92px;
+  width: calc((100% - 30px) / 2);
+}
+@media screen and (min-width: 768px) {
+  .clients-item {
+    width: 226px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients-item {
+    width: 170px;
+  }
 }
 .clients-link {
   width: 100%;
