@@ -105,6 +105,12 @@ body {
   margin-right: auto;
   padding: 0px 15px;
 }
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
 .logo {
   font-family: "Raleway", sans-serif;
   font-style: normal;
@@ -370,7 +376,20 @@ body {
 .subscribe-form {
   display: flex;
   position: relative;
-  justify-content: center;
+}
+@media screen and (min-width: 320px) {
+  .subscribe-form {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .subscribe-form {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
 }
 .subscribe-title {
   font-weight: 700;
@@ -381,10 +400,13 @@ body {
   color: #ffffff;
   margin-bottom: 20px;
 }
+@media screen and (min-width: 768px) {
+  .subscribe-title {
+    margin-top: 60px;
+  }
+}
 .subscribe-input {
-  width: 358px;
   height: 50px;
-  margin-right: 12px;
   padding-left: 16px;
   background-color: #2f303a;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -396,6 +418,22 @@ body {
   transition-duration: 250ms;
   transition-timing-function: var(--transition-timing-function);
 }
+@media screen and (min-width: 320px) {
+  .subscribe-input {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .subscribe-input {
+    width: 450;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .subscribe-input {
+    width: 358px;
+    margin-right: 12px;
+  }
+}
 .subscribe-input:focus {
   border-color: var(--main-link-color);
 }
@@ -406,6 +444,7 @@ body {
   display: inline-block;
   position: relative;
   min-width: 200px;
+  height: 50px;
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -490,25 +529,27 @@ input::placeholder {
 }
 
 .header {
-  padding: 25px 0;
   border: 1px solid #ececec;
 }
-
 .header__container {
+  padding: 25px 0;
   display: flex;
 }
-
 .header__navigation {
   display: flex;
   align-items: center;
 }
-
-.heder__menu {
+.header__menu {
   display: flex;
   margin-left: 93px;
 }
+.header__connect {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
 
-.menu .item:not(:last-child) {
+.menu .menu__item:not(:last-child) {
   margin-right: 50px;
 }
 .menu .link {
@@ -527,11 +568,8 @@ input::placeholder {
 .menu li .current {
   color: var(--main-link-color);
 }
-
-.header__connect {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
+.menu__item {
+  position: relative;
 }
 
 .connect .link:hover, .connect .link:focus {
@@ -559,10 +597,6 @@ input::placeholder {
   color: #2196f3;
 }
 
-.item {
-  position: relative;
-}
-
 .link.current::after {
   content: "";
   position: absolute;
@@ -573,6 +607,12 @@ input::placeholder {
   height: 4px;
   border-radius: 2px;
   background: #2196f3;
+}
+
+@media screen and (min-width: 320px) {
+  .logo__header {
+    margin-left: 15px;
+  }
 }
 
 .container__hero {
@@ -593,16 +633,16 @@ input::placeholder {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg-hero.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg-hero-mob.jpg);
 }
-@media screen and (min-width: 320px) {
-  .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg-hero-mob.jpg);
-  }
-}
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 768px) {
   .hero {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg-hero-tab.jpg);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg-hero.jpg);
   }
 }
 .hero__title {
@@ -934,7 +974,7 @@ input::placeholder {
 }
 
 .container__clients {
-  padding: 94px 0;
+  padding: 94px 15px;
 }
 @media screen and (min-width: 768px) {
   .container__clients {
@@ -992,7 +1032,7 @@ input::placeholder {
 }
 @media screen and (min-width: 320px) {
   .footer .container {
-    max-width: 320px;
+    max-width: 480px;
     gap: 60px;
     text-align: center;
     justify-content: center;
@@ -1009,10 +1049,18 @@ input::placeholder {
 @media screen and (min-width: 1200px) {
   .footer .container {
     max-width: 1200px;
+    align-items: baseline;
+    text-align: left;
   }
 }
 .footer-link {
   font-style: normal;
+}
+@media screen and (min-width: 1200px) {
+  .footer-link {
+    width: 232px;
+    margin-right: 70px;
+  }
 }
 .footer-logo {
   color: #ffffff;
@@ -1039,6 +1087,8 @@ input::placeholder {
 @media screen and (min-width: 1200px) {
   .footer-soc {
     max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
