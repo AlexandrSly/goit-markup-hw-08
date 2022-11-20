@@ -346,12 +346,6 @@ body {
   display: flex;
   gap: 7px;
 }
-@media screen and (min-width: 1200px) {
-  .check-text {
-    font-size: 14px;
-    line-height: 1.71;
-  }
-}
 .check-link {
   color: var(--main-link-color);
 }
@@ -558,13 +552,41 @@ input::placeholder {
   align-items: center;
 }
 .header__menu {
-  display: flex;
-  margin-left: 93px;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .header__menu {
+    display: contents;
+    display: flex;
+    margin-left: 86px;
+    margin-right: 93px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__menu {
+    display: flex;
+    margin-left: 93px;
+  }
 }
 .header__connect {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .header__connect {
+    display: contents;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 50px;
+    font-size: 12px;
+    gap: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__connect {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
 }
 
 .menu .menu__item:not(:last-child) {
@@ -593,8 +615,10 @@ input::placeholder {
 .connect .link:hover, .connect .link:focus {
   color: #2196f3;
 }
-.connect .connect__item + .connect__item {
-  margin-left: 50px;
+@media screen and (min-width: 1200px) {
+  .connect .connect__item + .connect__item {
+    margin-left: 50px;
+  }
 }
 .connect__link {
   font-weight: 500;
