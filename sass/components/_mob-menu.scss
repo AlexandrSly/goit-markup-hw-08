@@ -1,0 +1,22 @@
+.mob-menu {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fffff;
+}
+
+.mob-menu__close {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 8px;
+  top: 8px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  @extend %align-list;
+  cursor: pointer;
+  transition-property: fill, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--transition-timing-function);
+}
