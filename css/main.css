@@ -110,12 +110,17 @@ body {
   padding-top: 15px;
   padding-bottom: 15px;
 }
-.mob-menu > .container {
+
+.mob-menu > .mob-menu_container {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   overflow: auto;
+}
+
+.mob-menu_container {
+  padding-left: 40px;
 }
 
 .menu-mob__open {
@@ -128,12 +133,12 @@ body {
   align-items: center;
   margin-left: auto;
 }
+
 @media screen and (min-width: 768px) {
   .menu-mob__container {
     display: none;
   }
 }
-
 .mob-menu__close {
   display: block;
   margin-left: auto;
@@ -192,14 +197,20 @@ body {
 
 .menu-soc_list {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
 }
 
 .menu-soc__item {
   position: relative;
   display: block;
-  padding: 10px;
+}
+
+.menu-soc__item:not(:last-child) {
+  padding-right: 10px;
+}
+
+.menu-soc__item:not(:first-child) {
+  padding-left: 10px;
 }
 
 .menu-soc__link {
