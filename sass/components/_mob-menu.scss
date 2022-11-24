@@ -56,6 +56,12 @@
   transition-timing-function: var(--transition-timing-function);
 }
 
+.mob-menu__close:hover,
+.mob-menu__close:focus {
+  fill: #ffffff;
+  background-color: #2196f3;
+}
+
 .menu-mob__list {
   margin-top: 48px;
   margin-bottom: 64px;
@@ -94,8 +100,6 @@
 
 .menu-soc_list {
   display: flex;
-
-  // justify-content: center;
   flex-wrap: wrap;
 }
 
