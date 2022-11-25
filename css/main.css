@@ -964,6 +964,11 @@ input::placeholder {
   border: 1px solid #eeeeee;
   flex-grow: 1;
 }
+@media screen and (min-width: 768px) {
+  .portfolio-item {
+    flex-grow: 1;
+  }
+}
 .portfolio-btn {
   font-weight: 500;
   font-size: 16px;
@@ -1030,6 +1035,7 @@ input::placeholder {
 .portfolio .img {
   display: block;
   max-width: 100%;
+  width: 100%;
   height: auto;
 }
 @media screen and (min-width: 1200px) {
@@ -1053,6 +1059,7 @@ input::placeholder {
 @media screen and (min-width: 1200px) {
   .portfolio .flex-element {
     width: 370px;
+    display: block;
   }
 }
 .portfolio-text {
