@@ -4,6 +4,8 @@
   background-color: #ffffff;
   top: 0;
   position: fixed;
+  top: 0;
+  left: 0;
   z-index: 1;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -76,7 +78,11 @@
   font-size: 40px;
   line-height: 1.17;
   letter-spacing: 0.02em;
-  color: #757575;
+  color: #212121;
+}
+
+.menu-mob__current {
+  color: #2196f3;
 }
 
 .mob-connect__tel {

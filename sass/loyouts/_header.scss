@@ -1,9 +1,23 @@
 .header {
+  height: 60px;
   border: 1px solid #ececec;
 
+  @media screen and (min-width: 768px) {
+    height: 80px;
+    border: 1px solid #ececec;
+  }
+
   &__container {
-    padding: 25px 0;
     display: flex;
+    padding-top: 12px;
+
+    @media screen and (min-width: 768px) {
+      padding-top: 21px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      padding-top: 25px;
+    }
   }
 
   &__navigation {
@@ -113,17 +127,23 @@
 .link.current::after {
   content: '';
   position: absolute;
-  bottom: -32px;
   right: 0;
   display: block;
   width: 100%;
   height: 4px;
   border-radius: 2px;
   background: #2196f3;
+  @media screen and (min-width: 768px) {
+    bottom: -28px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    bottom: -30px;
+  }
 }
 
 .logo__header {
   @media screen and (min-width: 320px) {
-    margin-left: 15px;
+    // margin-left: 15px;
   }
 }
