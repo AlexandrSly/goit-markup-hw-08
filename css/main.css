@@ -971,8 +971,6 @@ input::placeholder {
 }
 .portfolio-btn {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 1.62;
   letter-spacing: 0.03em;
   text-align: center;
   color: var(--main-title-color);
@@ -982,6 +980,18 @@ input::placeholder {
   transition-property: color, background-color, box-shadow;
   transition-duration: 250ms;
   transition-timing-function: var(--transition-timing-function);
+}
+@media screen and (min-width: 768px) {
+  .portfolio-btn {
+    font-size: 14px;
+    line-height: 1.14;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio-btn {
+    font-size: 16px;
+    line-height: 1.62;
+  }
 }
 .portfolio-btn:hover, .portfolio-btn:focus {
   color: #ffffff;
