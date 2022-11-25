@@ -1,5 +1,11 @@
 .portfolio {
-  padding: 94px 0;
+  @media screen and (min-width: 320px) {
+    padding: 60px 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0;
+  }
 
   &-menu {
     display: flex;
@@ -13,6 +19,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+    justify-content: center;
   }
 
   &-title {
@@ -34,6 +41,7 @@
   &-item {
     padding: 20px 24px;
     border: 1px solid #eeeeee;
+    flex-grow: 1;
   }
 
   &-btn {
@@ -88,10 +96,15 @@
   }
 
   &-link {
-    display: block;
+    display: flex;
+    flex-direction: column;
     transition-property: box-shadow;
     transition-duration: 250ms;
     transition-timing-function: var(--transition-timing-function);
+
+    @media screen and (min-width: 1200px) {
+      display: block;
+    }
   }
 
   &-link:hover,
@@ -117,11 +130,25 @@
   }
 
   .flex-element:nth-child(3n) {
-    margin-right: 0;
+    @media screen and (min-width: 1200px) {
+      margin-right: 0;
+    }
   }
 
   .flex-element {
-    width: 370px;
+    display: flex;
+    // display: block;
+    @media screen and (min-width: 320px) {
+      max-width: 450px;
+    }
+
+    @media screen and (min-width: 768px) {
+      width: 354px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 370px;
+    }
   }
 
   &-text {
